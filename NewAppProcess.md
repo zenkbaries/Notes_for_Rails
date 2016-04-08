@@ -8,7 +8,13 @@
 	$ rails new AppName -database=postgresql
 	```
 
-2. update `config/database.yml`:
+2. update `config/environments/production.rb`
+	```ruby
+	# Do not fallback to assets pipeline if a precompiled asset is missed.
+	config.assets.compile = true
+	```
+	
+3. update `config/database.yml`:
 
 	```
 	development:
@@ -40,13 +46,13 @@
 	  host: localhost
   ```
 
-3. Create initial database
+4. Create initial database
 
   ```
   $ rake db:create:all
   ```
 
-4. Set up Git
+5. Set up Git
 
   ```
   $ git init .
@@ -68,14 +74,14 @@
   $ git push -u origin master
   ```
 
-5. Update `app/config/environments/production.rb`. Change from 	`false` to `true`:
+6. Update `app/config/environments/production.rb`. Change from 	`false` to `true`:
 
   ```
    # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
   ```
 
-r6.	Deploying to Heroku. Create an app name that is unique on heroku.com:
+7.	Deploying to Heroku. Create an app name that is unique on heroku.com:
 
   ```
   $ heroku create New-Unique-App-Name
