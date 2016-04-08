@@ -75,14 +75,8 @@
   $ git push -u origin master
   ```
 
-6. Update `app/config/environments/production.rb`. Change from 	`false` to `true`:
 
-  ```
-   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = true
-  ```
-
-7.	Deploying to Heroku. Create an app name that is unique on heroku.com:
+6.	Deploying to Heroku. Create an app name that is unique on heroku.com:
 
   ```
   $ heroku create New-Unique-App-Name
