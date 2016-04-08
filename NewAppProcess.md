@@ -8,11 +8,12 @@
 	$ rails new AppName -database=postgresql
 	```
 
-2. update `config/environments/production.rb`
-	```ruby
-	# Do not fallback to assets pipeline if a precompiled asset is missed.
-	config.assets.compile = true
-	```
+2. Update `app/config/environments/production.rb`. Change from 	`false` to `true`:
+
+	  ```
+	   # Do not fallback to assets pipeline if a precompiled asset is missed.
+	  config.assets.compile = true
+	  ```
 	
 3. update `config/database.yml`:
 
