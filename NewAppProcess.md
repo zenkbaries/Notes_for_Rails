@@ -9,11 +9,11 @@
 	```
 
 2. Update `app/config/environments/production.rb`. Change from 	`false` to `true`:
-
-	  ```
-	   # Do not fallback to assets pipeline if a precompiled asset is missed.
-	  config.assets.compile = true
-	  ```
+	
+	```
+	# Do not fallback to assets pipeline if a precompiled asset is missed.
+	config.assets.compile = true
+	```
 	
 3. update `config/database.yml`:
 
