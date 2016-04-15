@@ -2,20 +2,20 @@
 
 ## Steps to create app
 
-### 1.	Create app:
+### 1.  Create app:
 
-```				
+```        
 $ rails new AppName -database=postgresql
 ```
 
-### 2.	Update `app/config/environments/production.rb`. Change from 	`false` to `true`:
+### 2.  Update `app/config/environments/production.rb`. Change from   `false` to `true`:
 
 ```
 # Do not fallback to assets pipeline if a precompiled asset is missed.
 config.assets.compile = true
 ```
 
-### 3. update `config/database.yml`:
+### 3. Update `config/database.yml`:
 
 ```
 development:
@@ -68,22 +68,55 @@ $ git commit -am "Inital Commit"
 ```
 
 ```
+
 $ git remote add origin git@github.com:zenkbaries/<repositery_name_here>.git
+
 ```
 
 ```
 $ git push -u origin master
 ```
-### 6.	Install testing environments
-Add following to `Gemfile`
+### 6.  Install testing environments
+Add these line at the bottom of `Gemfile`
 
-```
+```ruby
 group :development, :test do
-gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3.0'
 end
 ```
+Run this commands:
+```
+$bundle install
+$rails generate rspec:install
+```
+Remove test folder:
+```
+$rm -rf test
+```
 
-###7.	Deploying to Heroku. Create an app name that is unique on heroku.com:
+Run the test
+```
+$bundle exec rspec
+```
+
+### 7. Create controller
+Run this command to create controller.
+```
+$rails generate controller <controller_name>
+```
+
+### 8. Create modal
+```
+$rails generate model <modal_names> <col_name>:<col_type>
+```
+
+### 9. Add Bootstrap
+
+### 10. Add `simple_form` Gems
+
+### 11. Add 'devise' Gems
+
+### 10.  Deploying to Heroku. Create an app name that is unique on heroku.com:
 
 ```
 $ heroku create New-Unique-App-Name
