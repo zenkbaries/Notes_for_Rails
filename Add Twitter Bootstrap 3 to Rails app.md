@@ -5,13 +5,13 @@ source:	http://www.thefirehoseproject.com/nomster/7
 
 ## 1.	Add to Gemfile:
 ```ruby
-gem ‘bootstrap-sass’, ‘~3.3.51’
+gem 'bootstrap-sass', '~>3.3.5.1'
 gem 'sprockets', '2.11.0'
 ```
 
 Add the following if it's not already listed.
 ```ruby
-gem ‘sass-rails’ #comment out sass-rails’,’~>4.0.0’
+gem 'sass-rails' #comment out sass-rails’,’~>4.0.0’
 ```
 
 Run this command:
