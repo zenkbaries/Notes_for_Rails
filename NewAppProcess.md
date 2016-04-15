@@ -17,7 +17,7 @@ config.assets.compile = true
 
 ### 3. Update `config/database.yml`:
 
-```
+```ruby
 development:
 adapter: postgresql
 encoding: unicode
@@ -105,7 +105,7 @@ Run this command to create controller.
 $rails generate controller <controller_name>
 ```
 
-### 8. Create modal
+### 8. Create model
 ```
 $rails generate model <modal_names> <col_name>:<col_type>
 ```
