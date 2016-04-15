@@ -23,7 +23,8 @@ $bundle update sprockets
 ```
 Restart rails server
 ```
-$rails server```
+$rails server
+```
 
 ## 2. Import Bootstrap styles in `app/assets/stylesheets/application.scss`:
 
