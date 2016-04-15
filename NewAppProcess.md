@@ -114,7 +114,7 @@ $rails generate model <modal_names> <col_name>:<col_type>
 
 ### 10. Add `simple_form` Gems
 
-### 11. Add 'devise' Gems
+### 11. Add `devise` Gems
 
 ### 10.  Deploying to Heroku. Create an app name that is unique on heroku.com:
 
