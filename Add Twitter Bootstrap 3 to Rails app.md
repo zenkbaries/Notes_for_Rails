@@ -1,4 +1,5 @@
 # Add Twitter Bootstrap 3 to Rails app
+github:https://github.com/twbs/bootstrap-sass
 
 source:	http://www.thefirehoseproject.com/nomster/7
 
