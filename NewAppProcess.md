@@ -110,11 +110,11 @@ $rails generate controller <controller_name>
 $rails generate model <modal_names> <col_name>:<col_type>
 ```
 
-### 9. Add Bootstrap
+### 9. Add [Bootstrap](Add Twitter Bootstrap 3 to Rails app.md) gem
 
-### 10. Add `simple_form` Gems
+### 10. Add [Simple_form](https://github.com/plataformatec/simple_form) gem 
 
-### 11. Add `devise` Gems
+### 11. Add [Devise](https://github.com/plataformatec/devise) gem
 
 ### 10.  Deploying to Heroku. Create an app name that is unique on heroku.com:
 
