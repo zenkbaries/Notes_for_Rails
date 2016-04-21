@@ -85,10 +85,10 @@ standard version:
 Bootstrap version with conditional statements added:
 ```html
 <% if notice.present? %>
-<p class="alert alert-info"><%= notice %></p>
+	<p class="alert alert-info"><%= notice %></p>
 <% end %>
 <% if alert.present? %>
-<p class="alert alert-danger"><%= alert %></p>
+	<p class="alert alert-danger"><%= alert %></p>
 <% end %>
 ```
 
