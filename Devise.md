@@ -12,7 +12,7 @@ gem 'devise', '>= 4.0.0'
 
 ### 2.  Run bundle install:
 ```
-$bundle install
+$ bundle install
 ```
 
 
@@ -94,7 +94,7 @@ Bootstrap version with conditional statements added:
 
 ###	7.	Run this
 ```
-rails g devise:views
+$ rails g devise:views
 ```
 
 ### <#>.  Generate User model
