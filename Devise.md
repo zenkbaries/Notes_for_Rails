@@ -97,7 +97,7 @@ Bootstrap version with conditional statements added:
 $ rails g devise:views
 ```
 
-### <#>.  Generate User model
+### 8.  Generate User model
 It create a user model for user authentication. Run this command.
 
 
