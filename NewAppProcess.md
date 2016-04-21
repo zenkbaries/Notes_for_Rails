@@ -7,15 +7,31 @@
 ```        
 $ rails new AppName -database=postgresql
 ```
+### 2. Add this Gem `rails_12factor` for production group. It's needed if you plan to host on Heroku.
+As group:
+```ruby
+group :production do
+  # Use for to prevent Heroku to inject plug-in
+  # https://devcenter.heroku.com/articles/ruby-support#injected-plugins
+  gem 'rails_12factor',
+end
+```
+or as one liner:
+```ruby
+# Use for to prevent Heroku to inject plug-in
+# https://devcenter.heroku.com/articles/ruby-support#injected-plugins
+gem 'rails_12factor', group: :production
+```
 
-### 2.  Update `app/config/environments/production.rb`. Change from   `false` to `true`:
+
+### 3.  Update `app/config/environments/production.rb`. Change from   `false` to `true`:
 
 ```
 # Do not fallback to assets pipeline if a precompiled asset is missed.
 config.assets.compile = true
 ```
 
-### 3. Update `config/database.yml`:
+### 4. Update `config/database.yml`:
 
 ```ruby
 development:
@@ -47,13 +63,13 @@ password: password
 host: localhost
 ```
 
-### 4. Create initial database
+### 5. Create initial database
 
 ```
 $ rake db:create:all
 ```
 
-### 5. Set up Git
+### 6. Set up Git
 
 ```
 $ git init .
@@ -76,7 +92,7 @@ $ git remote add origin git@github.com:zenkbaries/<repositery_name_here>.git
 ```
 $ git push -u origin master
 ```
-### 6.  Install testing environments
+### 7.  Install testing environments
 Add these line at the bottom of `Gemfile`
 
 ```ruby
@@ -99,24 +115,34 @@ Run the test
 $bundle exec rspec
 ```
 
-### 7. Create controller
+### 8. Create controller
 Run this command to create controller.
 ```
 $rails generate controller <controller_name>
 ```
 
-### 8. Create model
+### 9. Create model
 ```
 $rails generate model <modal_names> <col_name>:<col_type>
 ```
 
-### 9. Add [Bootstrap](Add Twitter Bootstrap 3 to Rails app.md) gem
+### 10. Add [Bootstrap](Add Twitter Bootstrap 3 to Rails app.md) gem
 
-### 10. Add [Simple_form](https://github.com/plataformatec/simple_form) gem 
+### 11. Add [Simple_form](https://github.com/plataformatec/simple_form) gem 
 
-### 11. Add [Devise](https://github.com/plataformatec/devise) gem
+### 12. Add [Devise](https://github.com/plataformatec/devise) gem
 
-### 10.  Deploying to Heroku. Create an app name that is unique on heroku.com:
+### 13. Make sure gemfile has this at the top of the file.
+
+```ruby
+source "https://rubygems.org"
+ruby "2.2.3" #put in your current Ruby version you are using
+```
+
+for more info:https://devcenter.heroku.com/articles/ruby-versions
+
+
+### 14.  Deploying to Heroku. Create an app name that is unique on heroku.com:
 
 ```
 $ heroku create New-Unique-App-Name
