@@ -16,9 +16,9 @@ $bundle install
 ```
 
 
-### After `bundle install`, the resulting text will show this:
+#### After `bundle install`, the resulting text will show this:
 
-```text
+```
 ===============================================================================
 
 Some setup you must do manually if you haven't yet:
@@ -56,17 +56,53 @@ rails g devise:views
 ===============================================================================
 ```
 
+### 3. Modify `config/environments/development.rb` to define default url.
+```
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+```
+
+
+### 4. Modify `config/environments/production` to define actual url.
+```
+config.action_mailer.default_url_options = { host: '<yourwebURL.com>' }
+```
+
+### 5.	Make sure `config/routes.rb` has root_url pointing to somwhere:
+
+```
+root 'notes#index'   #<-- just an example
+```
+
+###	6. Ensure you have flash messages in app/views/layouts/application.html.erb.
+#### For example:
+
 standard version:
 ```html
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 ```
 
-Bootstrap version:
+Bootstrap version with conditional statements added:
 ```html
 <% if notice.present? %>
 <p class="alert alert-info"><%= notice %></p>
 <% end %>
 <% if alert.present? %>
 <p class="alert alert-danger"><%= alert %></p>
-<% end %>```
+<% end %>
+```
+
+###	7.	Run this
+```
+rails g devise:views
+```
+
+### <#>.  Generate User model
+It create a user model for user authentication. Run this command.
+
+
+```
+$ rails generate devise User
+$ rake db:migrate
+```
+
