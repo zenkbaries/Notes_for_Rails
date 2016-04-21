@@ -56,13 +56,13 @@ rails g devise:views
 ===============================================================================
 ```
 
-### 3. Modify `config/environments/development.rb` to define default url.
+### 3. Modify `config/environments/development.rb` to define development default url.
 ```
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 ```
 
 
-### 4. Modify `config/environments/production` to define actual url.
+### 4. Modify `config/environments/production` to define production url.
 ```
 config.action_mailer.default_url_options = { host: '<yourwebURL.com>' }
 ```
