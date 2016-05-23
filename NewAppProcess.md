@@ -5,7 +5,7 @@
 ### 1.  Create app:
 
 ```        
-$ rails new AppName -database=postgresql
+$ rails new AppName --database=postgresql
 ```
 ### 2. Add this Gem `rails_12factor` for production group. It's needed if you plan to host on Heroku.
 As group:
@@ -13,7 +13,7 @@ As group:
 group :production do
   # Use for to prevent Heroku to inject plug-in
   # https://devcenter.heroku.com/articles/ruby-support#injected-plugins
-  gem 'rails_12factor',
+  gem 'rails_12factor'
 end
 ```
 or as one liner:
@@ -24,7 +24,7 @@ gem 'rails_12factor', group: :production
 ```
 
 
-### 3.  Update `app/config/environments/production.rb`. Change from   `false` to `true`:
+### 3.  Update `/config/environments/production.rb`. Change from   `false` to `true`:
 
 ```
 # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -128,7 +128,7 @@ $rails generate model <modal_names> <col_name>:<col_type>
 
 ### 10. Add [Bootstrap](Add Twitter Bootstrap 3 to Rails app.md) gem
 
-### 11. Add [Simple_form](https://github.com/plataformatec/simple_form) gem 
+### 11. Add [Simple_form](https://github.com/plataformatec/simple_form) gem
 
 ### 12. Add [Devise](https://github.com/plataformatec/devise) gem
 
