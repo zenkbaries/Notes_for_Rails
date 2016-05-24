@@ -26,16 +26,8 @@ Restart rails server
 ```
 $rails server
 ```
-
-## 2. Import Bootstrap styles in `app/assets/stylesheets/application.scss`:
-
-```scss
-// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
-@import "bootstrap-sprockets";
-@import "bootstrap";
-```
-## 3.	Rename  `application.css`.
-Rename `application.css` to `application.scss` in `app/assets/stylesheets` directory
+## 2.	Rename  `application.css`:
+Rename `application.css` to `application.scss` in `/app/assets/stylesheets` directory
 
 ```
 $cd app/assets/stylesheets
@@ -43,9 +35,16 @@ $mv application.css application.scss
 $cd ../../../
 ```
 
+## 3. Import Bootstrap styles in `/app/assets/stylesheets/application.scss`:
 
+```scss
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+```
 
-## 4.	Modify `app/assets/javascripts/application.js` to look like this:
+## 4. Adjust `/app/assets/javascripts/application.js` to look like this:
+Add `//= require bootstrap-sprockets` to `application.js` like this:
 
 ```javascripts
 //= require jquery
