@@ -130,6 +130,16 @@ $rails generate model <modal_names> <col_name>:<col_type>
 
 ### 11. Add [Simple_form](https://github.com/plataformatec/simple_form) gem
 
+```
+ Be sure to have a copy of the Bootstrap stylesheet available on your
+  application, you can get it on http://getbootstrap.com/.
+
+  Inside your views, use the 'simple_form_for' with one of the Bootstrap form
+  classes, '.form-horizontal' or '.form-inline', as the following:
+
+    = simple_form_for(@user, html: { class: 'form-horizontal' }) do |form|
+```
+
 ### 12. Add [Devise](https://github.com/plataformatec/devise) gem
 
 ### 13. Make sure gemfile has this at the top of the file.
